@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Upload</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <p id="messageText"></p>
+            <button onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        function closeModal() {
+            document.getElementById("successModal").classList.remove("show");
+        }
+
+        // Simulate receiving a response from the server
+        fetch("/home/vostive/Desktop/project/tenseal-env/bin/python /home/vostive/Desktop/project/encrypt.py")
+            .then(response => response.json())
+            .then(data => {
+                const modal = document.getElementById("successModal");
+                const messageText = document.getElementById("messageText");
+                messageText.textContent = data.message;
+                modal.classList.add("show");
+            });
+    </script>
+</body>
+</html>

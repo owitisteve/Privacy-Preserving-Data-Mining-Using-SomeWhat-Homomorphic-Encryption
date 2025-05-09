@@ -1,0 +1,1 @@
+{"labels":["Male","Female"],"datasets":[{"label":"Counseling Sessions","data":[10,4],"backgroundColor":["#0072FF","#FF0000"]}]}

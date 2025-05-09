@@ -1,0 +1,111 @@
+/* General Reset for Consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('images/b4.png') no-repeat center center fixed;
+    background-size: cover;
+    transition: background 1.5s ease-in-out;
+    color: #333;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent; /* Transparent to show the background image */
+    position: absolute; /* Allows header content to float on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+header .logo {
+    width: 150px;
+    height: auto;
+    transition: transform 0.8s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+header .logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Logout Link */
+header .logout {
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header .logout:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Container for Content */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* To avoid overlapping with the header */
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 2px solid #ddd;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header .logo {
+        width: 120px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    header .logout {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
