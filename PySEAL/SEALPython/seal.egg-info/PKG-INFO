@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: seal
+Version: 2.3
+Summary: Python wrapper for SEAL
+Author: Todd Stavish, Shashwat Kishore
+Author-email: toddstavish@gmail.com
+Dynamic: author
+Dynamic: author-email
+Dynamic: summary
